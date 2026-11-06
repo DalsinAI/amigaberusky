@@ -44,6 +44,9 @@
 #ifdef LINUX
 #include <syslog.h>
 #include <unistd.h>
+#ifdef __amigaos__
+#include <SDL/SDL.h>
+#endif
 
 #endif // LINUX
 
@@ -233,6 +236,10 @@ inline void berror(const char *p_text,...)
   fprintf(stderr,"Error at line %d file %s: %s\n",__LINE__,__FILE__,text);
 
   assert(0);
+#ifdef __amigaos__
+  /* the SDL window has to be closed before exit(), or the program hangs */
+  SDL_Quit();
+#endif
   exit(255);
 }
 

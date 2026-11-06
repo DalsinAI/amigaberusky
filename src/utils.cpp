@@ -38,7 +38,13 @@
 
 #ifdef LINUX
 #include <dirent.h>
+#ifdef __amigaos__
+extern "C" {
 #include <fnmatch.h>
+}
+#else
+#include <fnmatch.h>
+#endif
 #endif
 #ifdef WINDOWS
 #include <direct.h>
@@ -123,12 +129,16 @@ void dir_list::load(const char *p_ini)
   ini_read_string_file(p_ini, INI_TMP, tmp, sizeof(tmp), "/var/tmp");
 
   getcwd(cwd,MAX_FILENAME);
+#ifndef __amigaos__
   update_path(levels);
   update_path(gamedata);
   update_path(graphics);  
   update_path(levels_user);
   update_path(tmp);
   chdir(cwd);
+#endif
+  /* AmigaOS: the names in berusky.ini are full ones already
+     (PROGDIR:Levels, T:); return_path() expands the "~" */
 #endif
 
 #ifdef WINDOWS

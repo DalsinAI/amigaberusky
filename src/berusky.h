@@ -51,10 +51,14 @@ using namespace std;
 #ifdef LINUX
 
 #include <syslog.h>
-#include <libintl.h>
 #include <SDL/SDL.h>
 
+#ifdef __amigaos__
+#define _(string) (string)
+#else
+#include <libintl.h>
 #define _(string) gettext (string)
+#endif
 
 #elif WINDOWS
 

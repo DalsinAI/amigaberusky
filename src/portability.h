@@ -71,6 +71,12 @@
 
 #define mkdirm(d)  mkdir(d,DEFAULT_DIR_MASK)
 
+#ifdef __amigaos__
+#include <stdlib.h>
+/* libnix has rand() but no random() */
+#define random()   rand()
+#endif
+
 #endif // ! _WIN32
 
 #endif // __PORTABILITY_H__

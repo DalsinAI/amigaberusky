@@ -25,7 +25,7 @@
  *
  */
 #include "portability.h"
-#ifdef LINUX
+#if defined(LINUX) && !defined(__amigaos__)
 #include <gtk/gtk.h>
 #endif
 #include <stdio.h>
@@ -271,8 +271,15 @@ const char * config_file(bool configure)
 /*
  * Let's begin
  */
+#ifdef __amigaos__
+extern "C" void amiga_start(void);
+#endif
+
 int main(int argc, char *argv[])
 {
+#ifdef __amigaos__
+  amiga_start();
+#endif
   GAME_MODE gmode = MENU;
   char     *p_garg = NULL;
 
@@ -280,7 +287,9 @@ int main(int argc, char *argv[])
   setbuf(stderr, NULL);
   srand(clock());
   /* Set locale via LC_ALL.  */
+#ifndef __amigaos__
   setlocale (LC_ALL, "");
+#endif
 
 #if ENABLE_NLS
   /* Set the text message domain.  */
@@ -289,7 +298,7 @@ int main(int argc, char *argv[])
   textdomain (PACKAGE);
 #endif
  
-#ifdef LINUX
+#if defined(LINUX) && !defined(__amigaos__)
   gtk_parse_args(&argc, &argv);
 #endif
 

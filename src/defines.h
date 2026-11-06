@@ -447,9 +447,15 @@ typedef int anim_handle;
 #define INI_USER_DIRECTORY "~/.berusky"
 #define INI_USER_LEVELS    "~/.berusky/User"
 #define INI_USER_PROFILES  "~/.berusky/Profiles"
+#ifdef __amigaos__
+#define INI_FILE_GLOBAL    "PROGDIR:"INI_FILE_NAME
+#define INI_FILE_USER      "~/.berusky/"INI_FILE_NAME
+#define INI_FILE_LOCAL     INI_FILE_NAME
+#else
 #define INI_FILE_GLOBAL    "/etc/berusky/"INI_FILE_NAME
 #define INI_FILE_USER      "~/.berusky/"INI_FILE_NAME
 #define INI_FILE_LOCAL     "./"INI_FILE_NAME
+#endif
 #define DIRECTORY_GET(d)   (d)
 #define FILE_GET(d)        (d)
 #elif WINDOWS

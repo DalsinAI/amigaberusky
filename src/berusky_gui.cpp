@@ -2666,7 +2666,13 @@ void game_gui::level_load(LEVEL_EVENT_QUEUE *p_queue)
 
 void game_gui::run_editor(void)
 { 
-#ifdef LINUX
+#ifdef __amigaos__
+  /* no fork(): the editor is run as a command and waited for */
+  char cmd[MAX_FILENAME+8];
+  snprintf(cmd, sizeof(cmd), "\"%s\" -e", p_dir->game_binary_get());
+  bprintf("%s",cmd);
+  system(cmd);
+#elif defined(LINUX)
   int pid = fork();
   if(!pid) {
     bprintf("%s -e",p_dir->game_binary_get());
