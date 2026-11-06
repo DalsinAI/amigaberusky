@@ -447,7 +447,7 @@ typedef int anim_handle;
 #define INI_USER_DIRECTORY "~/.berusky"
 #define INI_USER_LEVELS    "~/.berusky/User"
 #define INI_USER_PROFILES  "~/.berusky/Profiles"
-#define INI_FILE_GLOBAL    PACKAGE_DATA_DIR"/berusky/"INI_FILE_NAME
+#define INI_FILE_GLOBAL    "/etc/berusky/"INI_FILE_NAME
 #define INI_FILE_USER      "~/.berusky/"INI_FILE_NAME
 #define INI_FILE_LOCAL     "./"INI_FILE_NAME
 #define DIRECTORY_GET(d)   (d)

@@ -375,14 +375,12 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-SUBDIRS = po src data
-beruskydocdir = ${prefix}/doc/berusky
+SUBDIRS = po src
+beruskydocdir = ${prefix}/share/doc/berusky
 beruskydoc_DATA = \
 	README\
-	COPYING\
 	AUTHORS\
 	ChangeLog\
-	INSTALL\
 	NEWS\
 	TODO
 

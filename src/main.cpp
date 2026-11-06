@@ -144,11 +144,6 @@ void run_game(GAME_MODE gmode, char *p_garg, DIR_LIST *p_dir)
       main_queue.add(LEVEL_EVENT(GC_RUN_LEVEL_LINE, p_garg));
       break;
     
-    /* Run demo */
-    case USER_DEMO:
-      //main_queue.add(LEVEL_EVENT(GC_RUN_LEVEL_LINE, p_garg));
-      break;
-    
     /* WTF? */
     default:
       assert(0);
@@ -284,7 +279,16 @@ int main(int argc, char *argv[])
   setbuf(stdout, NULL);
   setbuf(stderr, NULL);
   srand(clock());
+  /* Set locale via LC_ALL.  */
+  setlocale (LC_ALL, "");
 
+#if ENABLE_NLS
+  /* Set the text message domain.  */
+  // bbindtextdomain (PACKAGE, LOCALEDIR);
+  bindtextdomain (PACKAGE, "/usr/share/locale");
+  textdomain (PACKAGE);
+#endif
+ 
 #ifdef LINUX
   gtk_parse_args(&argc, &argv);
 #endif
@@ -310,12 +314,6 @@ int main(int argc, char *argv[])
   else if(argc > 2 && (argv[1][0] != '-' || argv[1][1] == 'u'))
   {
     gmode = USER_LEVEL;
-    p_garg = argv[2];
-  }
-  /* Run demo */
-  else if(argc > 2 && (argv[1][0] != '-' || argv[1][1] == 'd'))
-  {
-    gmode = USER_DEMO;
     p_garg = argv[2];
   }
   /* Run normal game from menu */
@@ -345,7 +343,6 @@ int main(int argc, char *argv[])
 void start_logo_draw(GAME_MODE mode)
 {
   switch(mode) {  
-    case USER_DEMO:
     case USER_LEVEL:
     case MENU:
       {

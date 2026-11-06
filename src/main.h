@@ -31,7 +31,6 @@
 typedef enum game_mode {
 
   USER_LEVEL,
-  USER_DEMO,
   MENU,
   EDITOR
 

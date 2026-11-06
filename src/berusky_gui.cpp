@@ -271,7 +271,6 @@ void game_gui::menu_main(MENU_STATE state, size_ptr data, size_ptr data1)
         menu_item_draw(profiles, MENU_LEFT, MENU_SAVE_BACK, LEVEL_EVENT(GC_MENU_PROFILES));
         menu_item_draw(settings, MENU_LEFT, MENU_SAVE_BACK, LEVEL_EVENT(GC_MENU_SETTINGS));
         menu_item_draw(help, MENU_LEFT, MENU_SAVE_BACK, LEVEL_EVENT(GC_MENU_HELP,FALSE));
-        menu_item_draw(editor, MENU_LEFT, MENU_SAVE_BACK, LEVEL_EVENT(GC_RUN_EDITOR));      
         menu_item_draw(quit, MENU_LEFT, MENU_SAVE_BACK, LEVEL_EVENT(GC_MENU_QUIT));
       
         p_font->alignment_set(MENU_CENTER);
@@ -1058,8 +1057,6 @@ which can be controlled by these keys:"));
         p_font->print(NULL, X_START+20,  start_y += Y_DIFF, _("SHIFT+arrows"));
         
         p_font->print(NULL, X_START+20,  start_y += Y_DIFF, _("Tab"));
-        p_font->print(NULL, X_START+20,  start_y += Y_DIFF, _("N"));
-        p_font->print(NULL, X_START+20,  start_y += Y_DIFF, _("D"));
         p_font->print(NULL, X_START+20,  start_y += Y_DIFF, _("CTRL+X"));
         p_font->print(NULL, X_START+20,  start_y += Y_DIFF, _("F1"));
         p_font->print(NULL, X_START+20,  start_y += Y_DIFF, _("F2"));
@@ -1069,8 +1066,6 @@ which can be controlled by these keys:"));
         p_font->print(NULL, X_START+135,  start_y, _(". . . . . move the bug"));
         p_font->print(NULL, X_START+205,  start_y += Y_DIFF, _(". . quick bug movement"));
         p_font->print(NULL, X_START+86,  start_y += Y_DIFF, _(". . . . . . . switch among the bugs"));
-        p_font->print(NULL, X_START+60,  start_y += Y_DIFF, _(". . . . . . . . change the music"));
-        p_font->print(NULL, X_START+60,  start_y += Y_DIFF, _(". . . . . . . . demo"));
         p_font->print(NULL, X_START+110, start_y += Y_DIFF, _(". . . . . . quit quickly"));
         p_font->print(NULL, X_START+60,  start_y += Y_DIFF, _(". . . . . . . . Help"));
         p_font->print(NULL, X_START+60,  start_y += Y_DIFF, _(". . . . . . . . Save level"));
@@ -2835,10 +2830,6 @@ bool game_gui::callback(LEVEL_EVENT_QUEUE *p_queue, int frame)
         p_ber->game_data_load();
         break;
       
-      case GC_RUN_EDITOR:
-        run_editor();
-        break;
-
       case GI_MENU_BACK_POP:
         back_pop();
         break;

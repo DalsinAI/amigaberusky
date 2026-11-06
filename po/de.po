@@ -1,0 +1,976 @@
+# German translation of berusky
+# This file is distributed under the same license as the berusky package.
+# Helge Kreutzmann <debian@helgefjell.de>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: berusky 1.1-6\n"
+"POT-Creation-Date: 2011-02-26 17:54+0100\n"
+"PO-Revision-Date: 2011-03-03 17:42+0100\n"
+"Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
+"Language-Team: de <debian-l10n-german@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/berusky.cpp:96 src/berusky_gui.cpp:163
+msgid "training"
+msgstr "Training"
+
+#: src/berusky.cpp:97 src/berusky_gui.cpp:164
+msgid "easy"
+msgstr "leicht"
+
+#: src/berusky.cpp:98 src/berusky_gui.cpp:165
+msgid "intermediate"
+msgstr "fortgeschrittener Anfänger"
+
+#: src/berusky.cpp:99 src/berusky_gui.cpp:166
+msgid "advanced"
+msgstr "fortgeschritten"
+
+#: src/berusky.cpp:100 src/berusky_gui.cpp:167
+msgid "impossible"
+msgstr "unmöglich"
+
+#: src/berusky.cpp:166
+#, c-format
+msgid "Unable to restart level %d!"
+msgstr "Level %d kann nicht neu gestartet werden!"
+
+#: src/berusky_gui.cpp:95
+msgid "new game"
+msgstr "Neues Spiel"
+
+#: src/berusky_gui.cpp:96
+msgid "password"
+msgstr "Passwort"
+
+#: src/berusky_gui.cpp:97
+msgid "help"
+msgstr "Hilfe"
+
+#: src/berusky_gui.cpp:98
+msgid "editor"
+msgstr "Editor"
+
+#: src/berusky_gui.cpp:99 src/berusky_gui.cpp:1197
+msgid "quit"
+msgstr "Quit"
+
+#: src/berusky_gui.cpp:116
+msgid "berusky (C) Anakreon 1997-2007\n"
+msgstr "berusky (C) Anakreon 1997-2007\n"
+
+#: src/berusky_gui.cpp:117
+msgid "distributed under GPL\n"
+msgstr "vertrieben unter der GPL\n"
+
+#: src/berusky_gui.cpp:161
+msgid "select difficulty of the new game:"
+msgstr "Bitte Schwierigkeitsgrad des neuen Spiels auswählen:"
+
+#: src/berusky_gui.cpp:168 src/berusky_gui.cpp:233 src/berusky_gui.cpp:330
+#: src/berusky_gui.cpp:384 src/berusky_gui.cpp:598 src/berusky_gui.cpp:680
+#: src/berusky_gui.cpp:763 src/berusky_gui.cpp:837 src/berusky_gui.cpp:928
+#: src/berusky_gui.cpp:1282
+msgid "back"
+msgstr "zurück"
+
+#: src/berusky_gui.cpp:223
+msgid "please insert a password to level:"
+msgstr "Bitte Passwort eines Levels eingeben:"
+
+#: src/berusky_gui.cpp:232
+msgid "play"
+msgstr "spielen"
+
+#: src/berusky_gui.cpp:320
+msgid "Cha cha cha!!!\n"
+msgstr "Ha Ha Ha!!!\n"
+
+#: src/berusky_gui.cpp:321
+msgid "Would you like to cheat?\n"
+msgstr "Sie wollen wohl schummeln?\n"
+
+#: src/berusky_gui.cpp:322
+msgid "Try me again!"
+msgstr "Versuchen Sie es erneut!"
+
+#: src/berusky_gui.cpp:380 src/berusky_gui.cpp:927
+msgid "level hint"
+msgstr "Level-Tipps"
+
+#: src/berusky_gui.cpp:381
+msgid "game controls"
+msgstr "Spielsteuerung"
+
+#: src/berusky_gui.cpp:382
+msgid "game rulez"
+msgstr "Spielregeln"
+
+#: src/berusky_gui.cpp:383
+msgid "authors"
+msgstr "Autoren"
+
+#: src/berusky_gui.cpp:444
+msgid "Basic rules and game elements"
+msgstr "Grundlegende Regeln und Spielelemente"
+
+#: src/berusky_gui.cpp:447
+msgid ""
+"In order to leave each level it is\n"
+"necessary to own five keys and also\n"
+"to have a free way to the exit.\n"
+"\n"
+"You will be meeting miscellaneous game\n"
+"elements while completing individual\n"
+"missions, we will try to explain their\n"
+"meaning now.\n"
+msgstr ""
+"Um jeden Level zu beenden, müssen fünf\n"
+"Schlüssel eingesammelt werden und auch\n"
+"freier Zugang zum Ausgang bestehen.\n"
+"\n"
+"Sie werden auf verschiedene Spielelemente\n"
+"beim Lösen der einzelnen Missionen treffen,\n"
+"ihre Bedeutung wird jetzt erklärt.\n"
+
+#: src/berusky_gui.cpp:455
+msgid "box - it is possible to push it."
+msgstr "Kasten - er kann geschoben werden."
+
+#: src/berusky_gui.cpp:464
+msgid "explosive - can destroy the boxes."
+msgstr "Sprengkörper - können Kästen zerstören."
+
+#: src/berusky_gui.cpp:478 src/berusky_gui.cpp:514 src/berusky_gui.cpp:559
+msgid "Active game elements"
+msgstr "Aktive Spielelemente"
+
+#: src/berusky_gui.cpp:480
+msgid "key - you need five of them."
+msgstr "Schlüssel - sie benötigen fünf davon."
+
+#: src/berusky_gui.cpp:483
+msgid "exit - a gate to next level."
+msgstr "Ausgang - ein Tor zum nächsten Level."
+
+#: src/berusky_gui.cpp:493
+msgid "stone - can be broken by a pickax."
+msgstr "Stein - kann mit Spitzhacke zerstört werden."
+
+#: src/berusky_gui.cpp:502
+msgid "pickax - a tool for stone crushing."
+msgstr "Spitzhacke - ein Werkzeug um Steine zu zertrümmern."
+
+#: src/berusky_gui.cpp:517
+msgid ""
+"color key - used to unlock color door,\n"
+"only a bug with identical color can\n"
+"pick them up"
+msgstr ""
+"Farbschlüssel - zum Aufschließen von\n"
+"Farbtüren, nur ein Käfer mit identischer\n"
+"Farbe kann ihn einsammeln"
+
+#: src/berusky_gui.cpp:532
+msgid ""
+"color door - can be opened by the\n"
+"respective color key only"
+msgstr ""
+"Farbtür - kann nur von dem entsprechenden\n"
+"Farbschlüssel geöffnet werden"
+
+#: src/berusky_gui.cpp:543
+msgid ""
+"color gate-way - only a bug with\n"
+"identical color is allowed to go\n"
+"through. Boxes cannot be pushed\n"
+"through."
+msgstr ""
+"Farbdurchgang - nur ein Käfer mit\n"
+"identischer Farbe darf durch. Kästen\n"
+"können nicht hindurch geschoben\n"
+"werden."
+
+# FIXME: Erst singular, dann plural
+#: src/berusky_gui.cpp:562
+msgid ""
+"one-pass door - can be used only once,\n"
+"then they close them off and there's no\n"
+"way to open them\n"
+msgstr ""
+"Einwegtür - kann nur einmal verwandt werden,\n"
+"dann werden sie geschlossen und können nicht\n"
+"mehr geöffnet werden\n"
+
+#: src/berusky_gui.cpp:582
+msgid ""
+"Other elements not listed here are just\n"
+"walls, which have no interesting\n"
+"properties. They cannot be push away nor\n"
+"it is possible to break them anywise.\n"
+msgstr ""
+"Andere hier nicht aufgeführte Elemente sind\n"
+"einfach Mauern, die keine interessanten\n"
+"Eigenschaften haben. Sie können nicht verschoben\n"
+"oder anderweitig zerstört werden.\n"
+
+#: src/berusky_gui.cpp:596
+msgid "previous"
+msgstr "zurück"
+
+#: src/berusky_gui.cpp:597
+msgid "next"
+msgstr "vor"
+
+#: src/berusky_gui.cpp:646
+msgid "Game Controls"
+msgstr "Spielsteuerung"
+
+#: src/berusky_gui.cpp:649
+msgid "Up to five bugs are available,which can be controlled by these keys:"
+msgstr ""
+"Bis zu fünf Käfer sind verfügbar, die mit folgenden Tasten gesteuert werden:"
+
+#: src/berusky_gui.cpp:656
+msgid "arrows"
+msgstr "Pfeiltasten"
+
+#: src/berusky_gui.cpp:658
+msgid "Tab"
+msgstr "Tabulator"
+
+#: src/berusky_gui.cpp:659
+msgid "N"
+msgstr "N"
+
+#: src/berusky_gui.cpp:660
+msgid "D"
+msgstr "D"
+
+#: src/berusky_gui.cpp:661
+msgid "ALT+X"
+msgstr "ALT-X"
+
+#: src/berusky_gui.cpp:662
+msgid "F1"
+msgstr "F1"
+
+#: src/berusky_gui.cpp:663
+msgid "F2"
+msgstr "F2"
+
+#: src/berusky_gui.cpp:664
+msgid "F3"
+msgstr "F3"
+
+#: src/berusky_gui.cpp:666
+# FIXME: The number of dots has to be verified
+msgid " . . . . . . . move the bug"
+msgstr " . . . . . . . den Käfer bewegen"
+
+#: src/berusky_gui.cpp:667
+msgid ". . . . . . . switch among the bugs"
+msgstr ". . . . . . . unter den Käfern umschalten"
+
+#: src/berusky_gui.cpp:668
+msgid ". . . . . . . . change the music"
+msgstr ". . . . . . . . die Musik ändern"
+
+#: src/berusky_gui.cpp:669
+msgid ". . . . . . . . demo"
+msgstr ". . . . . . . . Demo"
+
+#: src/berusky_gui.cpp:670
+msgid ". . . . . . quit quickly"
+msgstr ". . . . . . schnell beenden"
+
+#: src/berusky_gui.cpp:671
+msgid ". . . . . . . . Help"
+msgstr ". . . . . . . . Hilfe"
+
+#: src/berusky_gui.cpp:672
+msgid ". . . . . . . . Save level"
+msgstr ". . . . . . . . Level speichern"
+
+#: src/berusky_gui.cpp:673
+msgid ". . . . . . . . Load level"
+msgstr ". . . . . . . . Level laden"
+
+#: src/berusky_gui.cpp:826
+msgid "Level hint:"
+msgstr "Level-Tipp:"
+
+# FIXME: Rechtschreibung von Sorry
+#: src/berusky_gui.cpp:828
+msgid ""
+"\n"
+"Sory dude, no hint available for this\n"
+"level."
+msgstr ""
+"\n"
+"Tut mir leid, für diesen Level gibt es\n"
+"keinen Tipp."
+
+#: src/berusky_gui.cpp:887
+msgid "difficulty training"
+msgstr "Schwierigkeitstraining"
+
+#: src/berusky_gui.cpp:888 src/berusky_gui.cpp:894 src/berusky_gui.cpp:900
+#: src/berusky_gui.cpp:906 src/berusky_gui.cpp:912
+#, c-format
+msgid "Level: %d"
+msgstr "Level: %d"
+
+#: src/berusky_gui.cpp:889 src/berusky_gui.cpp:895 src/berusky_gui.cpp:901
+#: src/berusky_gui.cpp:907 src/berusky_gui.cpp:913
+#, c-format
+msgid "Password: %s"
+msgstr "Passwort: %s"
+
+#: src/berusky_gui.cpp:893
+msgid "difficulty easy"
+msgstr "Schwierigkeit leicht"
+
+#: src/berusky_gui.cpp:899
+msgid "difficulty intermediate"
+msgstr "Schwierigkeit fortgeschrittener Anfänger"
+
+#: src/berusky_gui.cpp:905
+msgid "difficulty advanced"
+msgstr "Schwierigkeit fortgeschritten"
+
+#: src/berusky_gui.cpp:911
+msgid "difficulty impossible"
+msgstr "Schwierigkeit unmöglich"
+
+#: src/berusky_gui.cpp:926
+msgid "play level"
+msgstr "Level spielen"
+
+#: src/berusky_gui.cpp:1032 src/editor.cpp:786 src/level_active.cpp:294
+#, c-format
+msgid "Unable to load level %s"
+msgstr "Level %s kann nicht geladen werden"
+
+#: src/berusky_gui.cpp:1050
+#, c-format
+msgid "Unable to load level %d from set %d"
+msgstr "Level %d aus Satz %d kann nicht geladen werden"
+
+#: src/berusky_gui.cpp:1120 src/berusky_gui.cpp:1182
+msgid "your bugs have survived!"
+msgstr "Ihre Käfer haben überlebt!"
+
+#: src/berusky_gui.cpp:1121 src/berusky_gui.cpp:1126
+#, c-format
+msgid "difficulty %s"
+msgstr "Schwierigkeit %s"
+
+#: src/berusky_gui.cpp:1122 src/berusky_gui.cpp:1186
+#, c-format
+msgid "it takes %d steps"
+msgstr "Es werden %d Schritte benötigt"
+
+#: src/berusky_gui.cpp:1123 src/berusky_gui.cpp:1188
+#, c-format
+msgid "and %s."
+msgstr "und %s"
+
+#: src/berusky_gui.cpp:1125
+msgid "your bugs have given it up!"
+msgstr "Ihre Käfer haben aufgegeben!"
+
+#: src/berusky_gui.cpp:1127
+#, c-format
+msgid "they made %d steps"
+msgstr "Sie machten %d Schritte"
+
+#: src/berusky_gui.cpp:1128
+#, c-format
+msgid "and spent %s"
+msgstr "und benötigten %s"
+
+#: src/berusky_gui.cpp:1139
+msgid "play next level"
+msgstr "Nächsten Level spielen"
+
+#: src/berusky_gui.cpp:1140
+msgid "back to menu"
+msgstr "Zurück zum Menü"
+
+#: src/berusky_gui.cpp:1183
+#, c-format
+msgid "custom level %s."
+msgstr "Angepasster Level %s."
+
+#: src/berusky_gui.cpp:1338
+msgid "return to game (ESC)"
+msgstr "Zurück zum Spiel (ESC)"
+
+#: src/berusky_gui.cpp:1339
+msgid "restart level (CTRL+R)"
+msgstr "Level neustarten (STRG-R)"
+
+#: src/berusky_gui.cpp:1341
+msgid "save game (F2)"
+msgstr "Spiel speichern (F2)"
+
+#: src/berusky_gui.cpp:1342
+msgid "load game (F3)"
+msgstr "Spiel laden (F3)"
+
+#: src/berusky_gui.cpp:1344
+msgid "level hint (CTRL+F1)"
+msgstr "Level-Tipp (STRG-F1)"
+
+#: src/berusky_gui.cpp:1345
+msgid "help (F1)"
+msgstr "Hilfe (F1)"
+
+#: src/berusky_gui.cpp:1347
+msgid "back to main menu"
+msgstr "Zurück zum Hauptmenü"
+
+#: src/berusky_gui.cpp:1348
+msgid "quit (CTRL+X)"
+msgstr "Ende (STRG-X)"
+
+#: src/berusky_gui.cpp:1410
+msgid "Level saved..."
+msgstr "Level gespeichert ..."
+
+#: src/berusky_gui.cpp:1425
+msgid "Level loaded..."
+msgstr "Level geladen ..."
+
+#: src/defines.h:398
+msgid "Berusky"
+msgstr "Berusky"
+
+#: src/editor.cpp:417
+#, c-format
+msgid "I:%d V:%d R:%d L:%d"
+msgstr "G:%d V:%d R:%d E:%d"
+
+#: src/editor.cpp:445
+#, c-format
+msgid ""
+"Item: %s\n"
+"Variation: %d\n"
+"Rotation: %s"
+msgstr ""
+"Gegenstand: %s\n"
+"Variation: %d\n"
+"Drehung: %s"
+
+#: src/editor.cpp:483
+#, c-format
+msgid "selection %d,%d - %d,%d"
+msgstr "Auswahl %d,%d - %d,%d"
+
+#: src/editor.cpp:486
+#, c-format
+msgid "level cursor %d x %d"
+msgstr "Level-Cursor %d x %d"
+
+#: src/editor.cpp:490
+msgid "No selection"
+msgstr "Keine Auswahl"
+
+#: src/editor.cpp:507
+msgid "(1) floor"
+msgstr "(1) Boden"
+
+#: src/editor.cpp:508
+msgid "(2) items"
+msgstr "(2) Gegenstände"
+
+#: src/editor.cpp:509
+msgid "(3) players"
+msgstr "(3) Spieler"
+
+#: src/editor.cpp:510
+msgid "(4) all"
+msgstr "(4) alle"
+
+#: src/editor.cpp:546
+msgid "floor"
+msgstr "Boden"
+
+#: src/editor.cpp:549
+msgid "items"
+msgstr "Gegenstände"
+
+#: src/editor.cpp:552
+msgid "players"
+msgstr "Spieler"
+
+#: src/editor.cpp:555
+msgid "all layers"
+msgstr "Alle Ebenen"
+
+#: src/editor.cpp:561
+#, c-format
+msgid ""
+"active layer:\n"
+"\n"
+"%s"
+msgstr ""
+"Aktive Ebene:\n"
+"\n"
+"%s"
+
+#: src/editor.cpp:582
+msgid "(1)Grid:"
+msgstr "(1)Gitter:"
+
+#: src/editor.cpp:583
+msgid "(2)Floor:"
+msgstr "(2)Boden:"
+
+#: src/editor.cpp:584
+msgid "(3)Items:"
+msgstr "(3)Gegenstände:"
+
+#: src/editor.cpp:585
+msgid "(4)Players:"
+msgstr "(4)Spieler:"
+
+#: src/editor.cpp:617
+msgid "off"
+msgstr "aus"
+
+#: src/editor.cpp:618
+msgid "on"
+msgstr "ein"
+
+#: src/editor.cpp:736
+msgid "erase all data?"
+msgstr "Alle Daten löschen?"
+
+#: src/editor.cpp:761
+msgid "level is modified. erase all data?"
+msgstr "Level wurde geändert. Alle Daten löschen?"
+
+#: src/editor.cpp:769
+msgid "Level to load:"
+msgstr "Zu ladender Level:"
+
+#: src/editor.cpp:820
+msgid "save to:"
+msgstr "Speichern unter:"
+
+#: src/editor.cpp:829
+#, c-format
+msgid "file %s exists! overwrite?:"
+msgstr "Datei %s existiert! Überschreiben?"
+
+#: src/editor.cpp:837
+#, c-format
+msgid "Unable to save level %s"
+msgstr "Level %s kann nicht gespeichert werden"
+
+#: src/editor.cpp:840
+#, c-format
+msgid "Saved as %s"
+msgstr "Unter %s gespeichert"
+
+#: src/editor.cpp:896
+#, c-format
+msgid "Inserted item %d at %dx%d - %dx%d layer %d"
+msgstr "Gegenstand %d unter %dx%d - %dx%d Ebene %d eingefügt"
+
+#: src/editor.cpp:904
+#, c-format
+msgid "Inserted item %d at %dx%d layer %d"
+msgstr "Gegenstand %d unter %dx%d Ebene %d eingefügt"
+
+#: src/editor.cpp:938
+#, c-format
+msgid "[Modify] Rotating item at %dx%d layer %d"
+msgstr "[Ändern] Gegenstand unter %dx%d Ebene %d rotieren"
+
+#: src/editor.cpp:942
+#, c-format
+msgid "[Set] Rotating item at %dx%d layer %d"
+msgstr "[Setze] Gegenstand unter %dx%d Ebene %d rotieren"
+
+#: src/editor.cpp:945
+#, c-format
+msgid "Can't rotate item at %dx%d layer %d"
+msgstr "Gegenstand unter %dx%d Ebene %d kann nicht rotiert werden"
+
+#: src/editor.cpp:966
+#, c-format
+msgid "[Modify] Variating item at %dx%d layer %d"
+msgstr "[Ändern] Variiere Gegenstandt unter %dx%d Ebene %d"
+
+#: src/editor.cpp:970
+#, c-format
+msgid "[Set] Variating item at %dx%d layer %d"
+msgstr "[Setze] Variiere Gegenstand unter %dx%d Ebene %d"
+
+#: src/editor.cpp:996
+#, c-format
+msgid "Erased items from %dx%d - %dx%d layer %d"
+msgstr "Gegenstand von %dx%d - %dx%d Ebene %d gelöscht"
+
+#: src/editor.cpp:1001
+#, c-format
+msgid "Erased item at %dx%d layer %d"
+msgstr "Gegenstand unter %dx%d Ebene %d gelöscht"
+
+#: src/editor.cpp:1024
+#, c-format
+msgid "Can't rotate item %d"
+msgstr "Gegenstand %d kann nicht rotiert werden"
+
+#: src/editor.cpp:1083
+msgid "level is not saved. exit anyway?"
+msgstr "Level ist nicht gespeichert. Trotzdem beenden?"
+
+#: src/editor.cpp:1150
+msgid "Shading..."
+msgstr "Schattierung ..."
+
+#: src/editor.cpp:1356
+#, c-format
+msgid "Level %s %s"
+msgstr "Level %s %s"
+
+#: src/editor.cpp:1356
+msgid "(unsaved)"
+msgstr "(nicht gespeichert)"
+
+#: src/editor.cpp:1356
+msgid "(saved)"
+msgstr "(gespeichert)"
+
+#: src/editor.cpp:1391
+msgid "undo"
+msgstr "Rückgängig"
+
+#: src/editor.cpp:1393
+msgid "no more undo"
+msgstr "kein weiteres Rückgängig möglich"
+
+#. ----------------------------------------------------------------------
+#. An editor console code
+#. ----------------------------------------------------------------------
+#: src/editor.cpp:1455
+msgid "y"
+msgstr "j"
+
+#: src/editor.cpp:1456
+msgid "n"
+msgstr "n"
+
+#: src/level.cpp:32
+msgid "Floor"
+msgstr "Boden"
+
+#: src/level.cpp:34
+msgid "Player 1"
+msgstr "Spieler 1"
+
+#: src/level.cpp:35
+msgid "Player 2"
+msgstr "Spieler 2"
+
+#: src/level.cpp:36
+msgid "Player 3"
+msgstr "Spieler 3"
+
+#: src/level.cpp:37
+msgid "Player 4"
+msgstr "Spieler 4"
+
+#: src/level.cpp:38
+msgid "Player 5"
+msgstr "Spieler 5"
+
+#: src/level.cpp:40
+msgid "Box"
+msgstr "Kasten"
+
+#: src/level.cpp:41
+msgid "Explosive"
+msgstr "Sprengkörper"
+
+#: src/level.cpp:42
+msgid "Wall"
+msgstr "Mauer"
+
+#: src/level.cpp:43
+msgid "Exit"
+msgstr "Ausgang"
+
+#: src/level.cpp:44
+msgid "Stone"
+msgstr "Stein"
+
+#: src/level.cpp:45
+msgid "Key (to exit)"
+msgstr "Schlüssel (für Ausgang)"
+
+#: src/level.cpp:46
+msgid "Pickax"
+msgstr "Spitzhacke"
+
+#. ---
+#: src/level.cpp:49
+msgid "Color Key (for player 1)"
+msgstr "Farbschlüssel (für Spieler 1)"
+
+#: src/level.cpp:50
+msgid "Color Key (for player 2)"
+msgstr "Farbschlüssel (für Spieler 2)"
+
+#: src/level.cpp:51
+msgid "Color Key (for player 3)"
+msgstr "Farbschlüssel (für Spieler 3)"
+
+#: src/level.cpp:52
+msgid "Color Key (for player 4)"
+msgstr "Farbschlüssel (für Spieler 4)"
+
+#: src/level.cpp:53
+msgid "Color Key (for player 5)"
+msgstr "Farbschlüssel (für Spieler 5)"
+
+#. ---
+#: src/level.cpp:56 src/level.cpp:62 src/level.cpp:68 src/level.cpp:74
+msgid "Color door (for player 1)"
+msgstr "Farbtür (für Spieler 1)"
+
+#: src/level.cpp:57 src/level.cpp:63 src/level.cpp:69 src/level.cpp:75
+msgid "Color door (for player 2)"
+msgstr "Farbtür (für Spieler 2)"
+
+#: src/level.cpp:58 src/level.cpp:64 src/level.cpp:70 src/level.cpp:76
+msgid "Color door (for player 3)"
+msgstr "Farbtür (für Spieler 3)"
+
+#: src/level.cpp:59 src/level.cpp:65 src/level.cpp:71 src/level.cpp:77
+msgid "Color door (for player 4)"
+msgstr "Farbtür (für Spieler 4)"
+
+#: src/level.cpp:60 src/level.cpp:66 src/level.cpp:72 src/level.cpp:78
+msgid "Color door (for player 5)"
+msgstr "Farbtür (für Spieler 5)"
+
+#. ---
+#: src/level.cpp:81 src/level.cpp:87 src/level.cpp:93 src/level.cpp:99
+msgid "Color gate-way (for player 1)"
+msgstr "Farbdurchgang (für Spieler 1)"
+
+#: src/level.cpp:82 src/level.cpp:88 src/level.cpp:94 src/level.cpp:100
+msgid "Color gate-way (for player 2)"
+msgstr "Farbdurchgang (für Spieler 2)"
+
+#: src/level.cpp:83 src/level.cpp:89 src/level.cpp:95 src/level.cpp:101
+msgid "Color gate-way (for player 3)"
+msgstr "Farbdurchgang (für Spieler 3)"
+
+#: src/level.cpp:84 src/level.cpp:90 src/level.cpp:96 src/level.cpp:102
+msgid "Color gate-way (for player 4)"
+msgstr "Farbdurchgang (für Spieler 4)"
+
+#: src/level.cpp:85 src/level.cpp:91 src/level.cpp:97 src/level.cpp:103
+msgid "Color gate-way (for player 5)"
+msgstr "Farbdurchgang (für Spieler 5)"
+
+#. ---
+#: src/level.cpp:106 src/level.cpp:107 src/level.cpp:108 src/level.cpp:109
+#: src/level.cpp:111 src/level.cpp:112
+msgid "One-pass door"
+msgstr "Einwegtür"
+
+#. --
+#: src/level.cpp:115 src/level.cpp:116 src/level.cpp:117 src/level.cpp:118
+#: src/level.cpp:120 src/level.cpp:121 src/level.cpp:122 src/level.cpp:123
+msgid "Jamb (Wall)"
+msgstr "Jamb (Mauer)"
+
+#: src/level.cpp:128
+msgid "0 DG."
+msgstr "0°"
+
+#: src/level.cpp:129
+msgid "90 DG."
+msgstr "90°"
+
+#: src/level.cpp:130
+msgid "180 DG."
+msgstr "180°"
+
+#: src/level.cpp:131
+msgid "270 DG."
+msgstr "270°"
+
+#: src/level_active.cpp:278
+#, c-format
+msgid "User defined level %s..."
+msgstr "Nutzerdefinierter Level %s ..."
+
+#: src/level_active.cpp:285
+#, c-format
+msgid "Game level %s..."
+msgstr "Spiel-Level %s ..."
+
+#: src/level_game.cpp:145
+#, c-format
+msgid "level_generic::level_load %s..."
+msgstr "level_generic::level_load %s..."
+
+#: src/level_game.cpp:154
+#, c-format
+msgid "Checking %s...OK"
+msgstr "%s wird geprüft ... i.O."
+
+#: src/level_game.cpp:158
+#, c-format
+msgid "Checking %s...not found"
+msgstr "%s wird geprüft ... nicht gefunden"
+
+#: src/main.cpp:58
+#, c-format
+msgid "Berusky v.%s (C) Anakreon 2006, http://www.anakreon.cz/\n"
+msgstr "Berusky v.%s (C) Anakreon 2006, http://www.anakreon.cz/\n"
+
+#: src/main.cpp:59
+#, c-format
+msgid "This is free software; see the source for copying conditions.\n"
+msgstr ""
+"Dies ist freie Software; lesen Sie die Quellen für die Kopierbedingungen\n"
+
+#: src/main.cpp:60
+#, c-format
+msgid ""
+"There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A "
+"PARTICULAR PURPOSE.\n"
+msgstr ""
+"Es gibt KEINE Haftung; nicht mal für MARKTREIFE oder EIGNUNG FÜR EINEN "
+"BESTIMMTEN ZWECK.\n"
+
+#: src/main.cpp:61
+#, c-format
+msgid ""
+"Built %s, %s\n"
+"\n"
+msgstr ""
+"Erstellt um %s am %s\n"
+"\n"
+
+#: src/main.cpp:67
+#, c-format
+msgid ""
+"Bad command line argument(s)!\n"
+"\n"
+msgstr ""
+"Ungültige(s) Kommandozeilenargument(e)!\n"
+"\n"
+
+#: src/main.cpp:69
+#, c-format
+msgid ""
+"Using: berusky [-e [level.lv3]] [-u level.lv3]\n"
+"\n"
+msgstr ""
+"Aufruf: berusky [-e [level.lv3]] [-u level.lv3]\n"
+"\n"
+
+#: src/main.cpp:70
+#, c-format
+msgid "  -e [level.lv3]       -run level editor\n"
+msgstr "  -e [level.lv3]       -Level-Editor ausführen\n"
+
+#: src/main.cpp:71
+#, c-format
+msgid "  -u  level.lv3        -run level\n"
+msgstr "  -u  level.lv3        -Level ausführen\n"
+
+#: src/main.cpp:246
+#, c-format
+msgid "Checking config file %s..."
+msgstr "Konfigurationsdatei %s wird geprüft ..."
+
+#: src/main.cpp:250
+#, c-format
+msgid "Selected config file %s"
+msgstr "Ausgewählte Konfigurationsdatei %s"
+
+#: src/main.cpp:257
+msgid "Can't find any configuration file!"
+msgstr "Es kann keine Konfigurationsdatei gefunden werden!"
+
+#. Check ~./berusky/berusky.ini
+#: src/main.cpp:274
+#, c-format
+msgid "Checking %s/%s..."
+msgstr "%s/%s wird geprüft ..."
+
+#: src/main.cpp:276
+#, c-format
+msgid "missing, try to copy it from %s..."
+msgstr "fehlt, Kopie von %s wird versucht ..."
+
+#: src/main.cpp:279 src/main.cpp:285
+msgid "ok"
+msgstr "i.O."
+
+#: src/main.cpp:282
+msgid "failed"
+msgstr "fehlgeschlagen"
+
+#: src/main.cpp:430 src/main.cpp:497 src/main.cpp:563
+#, c-format
+msgid "Graphics dir '%s'"
+msgstr "Graphikverzeichnis %s"
+
+#: src/main.cpp:431
+msgid "Loading game graphics..."
+msgstr "Spielgraphiken werden geladen ..."
+
+#: src/main.cpp:459 src/main.cpp:529
+msgid "Unable to load data, exiting..."
+msgstr "Daten können nicht geladen werden, Abbruch ..."
+
+#: src/main.cpp:461 src/main.cpp:531
+#, c-format
+msgid "%d sprites loaded..."
+msgstr "%d Animationen geladen ..."
+
+#: src/main.cpp:498
+msgid "Loading menu graphics..."
+msgstr "Menügraphiken werden geladen ..."
+
+#: src/main.cpp:525
+#, c-format
+msgid "Unable to load font %d!"
+msgstr "Schrift %d kann nicht geladen werden!"
+
+#: src/main.cpp:550
+#, c-format
+msgid "Data dir '%s'"
+msgstr "Datenverzeichnis »%s«"
+
+#: src/main.cpp:551
+msgid "Loading items repository...."
+msgstr "Lade Depot mit Gegenständen ..."
+
+#: src/main.cpp:555
+msgid "Failed, exiting..."
+msgstr "Fehlschlag, Abbruch ..."
+
+#: src/main.cpp:564
+msgid "Checking backgrounds..."
+msgstr "Hintergründe werden überprüft ..."
+
+#: src/main.cpp:575
+#, c-format
+msgid "%d backgrounds..."
+msgstr "%d Hintergründe ..."
