@@ -102,6 +102,16 @@ void berusky_profile::load(const char *p_dir, const char *p_file)
 void berusky_profile::save(void)
 { 
   char buffer[1024];
+
+  if(!filename[0]) {
+    // a new profile: take the first name not already in use there
+    for(int i = 0; i < 1000000; i++) {
+      snprintf(filename, sizeof(filename), "profile%06d.ini", i);
+      if(!file_exists(DIRECTORY_GET(INI_USER_PROFILES), filename))
+        break;
+    }
+  }
+
   snprintf(buffer, 1024,
            "name = %s\nl0 = %d\nl1 = %d\nl2 = %d\nl3 = %d\nl4 = %d\nl5 = %d\n",
            profile_name,
@@ -117,10 +127,8 @@ void berusky_profile::save(void)
 void berusky_profile::create(const char *p_name)
 {
   memset(this,0,sizeof(*this));
-  strcpy(profile_name, p_name);
-  strcpy(filename,"profileXXXXXX");
-  mktemp(filename);
-  strcat(filename,".ini");
+  strncpy(profile_name, p_name, sizeof(profile_name)-1);
+  // the file name is picked on the first save(), in the profiles directory
 }
 
 // Scan the directory for all profile files
