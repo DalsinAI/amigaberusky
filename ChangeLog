@@ -1,0 +1,40 @@
+1.7
+    * Added extra levels from players
+    * Double-size mode question at game start
+
+1.6
+    * Updated editor for double size mode
+    * New graphics
+    * Light boxes
+
+1.5.2
+    * Fixed single-size mode
+    * Fixed profile save
+
+1.5
+    * Fullscreen switch (new settings menu)
+    * Double size mode
+    * Player profiles, new level path
+
+1.4
+    * Fast bug movements (with Arrows + SHIFT key)
+
+1.3
+    * Fixed rhbz#689106 - crash after start
+
+1.2
+    * Windows port
+    * Fixed broken hints rendering
+    * Fixed hint translation
+    * Big Endian fixes
+    * Level editor fixes:
+        - new side menu
+        - editor help
+        - panel fixes and fast scroll keys
+        - level load/save fixes
+
+1.1
+    * Some minor fixes
+
+1.0
+    * Initial version

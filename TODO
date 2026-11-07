@@ -1,0 +1,93 @@
+- Game hints
+- fast movement by default
+- single size - small menu backgrounds
+
+https://bugzilla.redhat.com/show_bug.cgi?id=1040127
+
+FirefoxOS version?
+
+Bugs:
+- What happens if user-levelset is finished?
+- Auto-shading? (for boxes - and when moves)
+- Windows version
+- Sound & Music
+
+Editor:
+- power pill
+
+- menu - icon - editor?
+- better animations - explosions and so
+- load file path from configure scripts?
+
+New Items:
+
+- new backgrounds
+- new ground
+- a hole
+- power pill
+
+Game:
+
+  TODO (in CZ):
+
+  - hudba a zvuky
+
+  - parser - setridit to podle pocatecnich pismen at to nemusim prohledavat cele
+  - prohledavani klavesovych eventu - take setridit
+  - process_events - prepsat to vsechno na process_events a vyhodit ty 
+    event_process (v tech tridach)
+  - udelat nejakou jednotnou alokaci eventu (misto toho new/delete)
+  
+  - pri nahravani -> nastavit p_ground pro ty co nemaji zadnou grafiku
+  - naplnit tu tabulku itemu nejakych spritu ktere se nekresli (NO_SPRIT)
+  
+  - uvolnovani surfacu z pameti!!
+  - flag SPRITE_NO_BACK - pod tim to spritem se nic nekresli
+            
+  - zkontrolovat to pretaceni animaci - jestli se to dobre uvolnuje a tak...
+  
+  - problem -> pokud smazu tu animaci v enginu a ma zaznam v levelu -> jak se to ten level dozvi?
+            -> pridat udalost -> smaz animaci!!! -> pro level
+            -> nastavit animace na -1 nebo nechat 0 jako nepouzitou?
+            -> dat ty animace dveri do toho dat souboru??
+
+  - int ber::configure(void) - predelat, lip vyuzivat ini soubor
+  - udelat oci aby blikali - v tom menu
+  - napoveda -> pohyb i na sipky, ne jen na mys (pridat event)
+  
+  - predelat nahravani grafiky spritu z berusky do berusky_gui??
+     
+  - nejake efekty pri vypisovani tech napisu? konecnych/startovnich obrazovek?
+  
+  - klavesy v memu -> enter na zadani hesla
+  
+  - udelat nejake uvodni uvitani a skonceni
+  
+  - uvolnovani pameti po dohrani kola?
+  
+  - dema!!
+  
+  - kredity -> Anjuta IDE
+  
+  - opravit konecne a vypustit do sveta!!!
+  
+  - vypnout aplikaci kdyz je deaktivovana (na pozadi, bez focusu)
+
+  - preklad textu hint/end texty
+
+Editor:
+
+ - aby se to vkladani neopakovalo?? 
+ 
+ - vykresleni aktualne vybraneho prvku a jeho rotace
+ 
+ - nejaky store na levely (pro lidi aby tam mohli prihravat svoje levely)? 
+  
+ - udelat to vyplnovani/mazani ctvercu 
+ 
+ - undo - aby fungovalo uz to prvni
+
+ - osetrit nejak ten vstup z klaves/mysi -> cist to jen 1x za kolo, aby mi
+   to neprehlcovalo vstupni frontu (mozna nepirdavat dalsi zpravy pokud to je preplneny?)     
+
+ - kapatko -> vyber prvku z levelu
