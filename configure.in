@@ -26,7 +26,7 @@ AM_GLIB_GNU_GETTEXT
 
 AM_PROG_LIBTOOL
 
-PKG_CHECK_MODULES(PACKAGE, [sdl SDL_image gtk+-2.0 gdk-2.0])
+PKG_CHECK_MODULES(PACKAGE, [sdl SDL_image gtk+-3.0 gdk-pixbuf-2.0])
 AC_SUBST(PACKAGE_CFLAGS)
 AC_SUBST(PACKAGE_LIBS)
 
@@ -50,7 +50,7 @@ fi
 
 dnl Set PACKAGE DATA & DOC DIR
 packagedatadir=share
-packagedocdir=doc/${PACKAGE}
+packagedocdir=share/doc/${PACKAGE}
 
 dnl Set PACKAGE DIRS in config.h.
 packagepixmapsdir=${packagedatadir}/pixmaps
@@ -66,7 +66,7 @@ AC_SUBST(PACKAGE_DATA_DIR)
 dnl Subst PACKAGE_DOC_DIR.
 NO_PREFIX_PACKAGE_DOC_DIR="${packagedocdir}"
 AC_SUBST(NO_PREFIX_PACKAGE_DOC_DIR)
-PACKAGE_DOC_DIR="${packageprefix}/${packagedocdir}"
+PACKAGE_DOC_DIR="${packageprefix}/share/${packagedocdir}"
 AC_SUBST(PACKAGE_DOC_DIR)
 
 dnl Subst PACKAGE_PIXMAPS_DIR.

@@ -1,0 +1,90 @@
+# Berusky 1.7.2 for AmigaOS 3.x, 68040/68060 + FPU, on OpenGPU's SDL 1.2
+# (sdl12-compat).
+#
+#   make -f amiga/Makefile.amigaos -j2 dist \
+#        STOVE=/path/to/openamigagcc-16.2.0-open4 \
+#        NDK=/path/to/OpenNDK/Include_H SDLKIT=/path/to/opengpu-sdk
+#
+# src/Makefile.am's berusky (the game and its level editor), with
+# amiga/config.h for configure's; no GTK (only for its argument parsing and
+# an error box, which upstream leaves out already) and no gettext (English).
+# SDLKIT is the OpenGPU developer kit: libSDL.a, sdl12-compat on
+# SDL2.module. It has no SDL_image 1.2: the Team's amiga/sdl_image_lite.c
+# (PNG on libpng) stands in. amiga/amiga_paths.c folds the "//" and ":/" in
+# Berusky's joined file names (-Wl,--wrap=fopen and the others): to AmigaDOS
+# that is the parent drawer. DEPS has the Team's static libpng and zlib
+# (/mnt/amigachrome/team2/deps/m68k-amigaos).
+
+STOVE   ?= $(HOME)/CradleLab/toolchain/openamigagcc-16.2.0-open4-x86_64-linux
+NDK     ?= $(HOME)/CradleLab/gfopensdk/OpenNDK/Include_H
+SDLKIT  ?= /mnt/amigachrome/team2/deps/opengpu-sdk
+DEPS    ?= /mnt/amigachrome/team2/deps/m68k-amigaos
+CC      = $(STOVE)/bin/m68k-amigaos-gcc
+CXX     = $(STOVE)/bin/m68k-amigaos-g++
+STRIP   = $(STOVE)/bin/m68k-amigaos-strip
+CPU     ?= -m68040 -m68881
+# -fno-tree-loop-distribute-patterns: GCC 16's loop miscompile (the kit's
+# sdl2-config gives it for GCC 16 too).
+OPT     ?= -O2 -fomit-frame-pointer -fno-tree-loop-distribute-patterns
+
+BUILD   = build/amigaos
+OBJDIR  = $(BUILD)/obj
+PROG    = Berusky
+OUT     = dist/Berusky
+
+DEFS    = -D__amigaos__ -DNDEBUG -DHAVE_CONFIG_H
+INC     = -Iamiga -Iamiga/include -I$(SDLKIT)/include -Iamiga/include/SDL -I$(SDLKIT)/include/SDL \
+          -I$(DEPS)/include
+CFLAGS  = -noixemul $(OPT) $(CPU) -fno-common -MMD -MP -w
+CXXFLAGS = $(CFLAGS) $(DEFS) $(INC) -std=gnu++98
+LDFLAGS = -noixemul $(CPU) -Wl,--wrap=getenv -Wl,--wrap=fopen -Wl,--wrap=open \
+          -Wl,--wrap=opendir -Wl,--wrap=stat -Wl,--wrap=mkdir -Wl,--wrap=chdir
+LIBS    = -L$(SDLKIT)/lib -L$(DEPS)/lib -lpng -lz -lSDL -lpthread -lm
+
+CXXSRC  = $(addprefix src/,2d_graph.cpp animation.cpp berusky.cpp data_parser.cpp editor.cpp \
+            events.cpp game_logic.cpp graphics.cpp ini.cpp input.cpp level.cpp level_active.cpp \
+            level_changer.cpp level_game.cpp utils.cpp data_parser_tables.cpp berusky_gui.cpp \
+            main.cpp gui.cpp profile.cpp)
+CSRC    = amiga/stack.c amiga/amiga_env.c amiga/amiga_paths.c amiga/amiga_start.c \
+          amiga/sdl_image_lite.c
+
+OBJS    = $(CXXSRC:%.cpp=$(OBJDIR)/%.o) $(CSRC:%.c=$(OBJDIR)/%.o)
+ICONS   = $(wildcard amiga/icons/*.info)
+
+all: $(BUILD)/$(PROG)
+
+$(BUILD)/$(PROG): $(OBJS)
+	$(CXX) $(LDFLAGS) -o $@.debug $(OBJS) $(LIBS)
+	$(STRIP) -o $@ $@.debug
+
+$(OBJDIR)/amiga/%.o: amiga/%.c
+	@mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -std=gnu99 -Iamiga/include/SDL -I$(SDLKIT)/include/SDL -I$(DEPS)/include \
+	  -I$(NDK) -Wall -c -o $@ $<
+
+$(OBJDIR)/%.o: %.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
+
+# The drawer: the program, berusky.ini (the data in the drawer), the
+# levels, game data and pictures as Berusky installs them, upstream's
+# ReadMe and the licence. Profiles, the player's own levels and the
+# settings the game writes are kept in the drawer's user/.berusky.
+dist: $(BUILD)/$(PROG) $(ICONS) AMIGA_PORT.md amiga/berusky.ini
+	rm -rf $(OUT) && mkdir -p $(OUT)
+	cp $(BUILD)/$(PROG) amiga/berusky.ini $(OUT)/
+	cp -R data/Levels data/GameData data/Graphics $(OUT)/
+	find $(OUT) -name 'Makefile*' -delete
+	cp AMIGA_PORT.md $(OUT)/ReadMe
+	cp README $(OUT)/ReadMe-upstream
+	cp amiga/COPYING.GPL-2 $(OUT)/COPYING.txt
+	cp amiga/icons/Berusky.info amiga/icons/ReadMe.info $(OUT)/
+	for f in ReadMe-upstream COPYING.txt; do cp amiga/icons/ReadMe.info $(OUT)/$$f.info; done
+	cp amiga/icons/Berusky-drawer.info dist/Berusky.info
+
+-include $(OBJS:.o=.d)
+
+clean:
+	rm -rf $(BUILD)
+
+.PHONY: all clean dist

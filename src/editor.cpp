@@ -1571,7 +1571,13 @@ void editor_gui::editor_run_level(void)
   return_path(p_dir->tmp_get(), TMP_LEVEL, filename, MAX_FILENAME);
 
   if(level.level_save(filename)) {
-#ifdef LINUX
+#ifdef __amigaos__
+    /* no fork(): the game is run as a command and waited for */
+    char cmd[2*MAX_FILENAME+16];
+    snprintf(cmd, sizeof(cmd), "\"%s\" -u \"%s\"", p_dir->game_binary_get(), filename);
+    bprintf("%s",cmd);
+    system(cmd);
+#elif defined(LINUX)
     int pid = fork();
     if(!pid) {
       char level_name[MAX_FILENAME];
