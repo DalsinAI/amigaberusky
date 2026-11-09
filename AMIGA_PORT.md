@@ -87,5 +87,5 @@ Licences
 Berusky, its levels, pictures and data: GPL 2 or later (COPYING.txt;
 the upstream tarball has no licence file, so the GPL 2 text is
 amiga/COPYING.GPL-2; data/*/COPYING give the terms). The Amiga files
-(amiga/): the AmiCradle Team, GPL 2 or later; the icon is upstream's
-data/Icon/berusky.png.
+(amiga/): the AmiCradle Team, GPL 2 or later; the icons are our
+own GlowIcons (amiga/icons/art/berusky.svg).
